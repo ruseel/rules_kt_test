@@ -1,0 +1,11 @@
+load(
+    "@io_bazel_rules_kotlin//kotlin:jvm.bzl",
+    "kt_javac_options",
+    "kt_jvm_library",
+)
+
+kt_jvm_library(
+    name = "common",
+    visibility = ["//visibility:public"],
+    srcs = glob(["src/main/kotlin/**/*.kt",]),
+)
